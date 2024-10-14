@@ -1037,7 +1037,6 @@ main {
   #CERT
 \*-----------------------------------*/
 
-
 .filter2-list { display: none; }
 
 .filter2-select-box {
@@ -1123,6 +1122,10 @@ main {
   overflow: hidden;
   margin-bottom: 15px;
 }
+/* .cert-course{
+  height: 500px;
+  width: 90%;
+} */
 
 .cert-img::before {
   content: "";
@@ -1168,7 +1171,7 @@ main {
 .cert-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: var(--transition-1);
 }
 
@@ -1197,7 +1200,6 @@ main {
 /*-----------------------------------*\
   #CERTIFICATION
 \*-----------------------------------*/
-
 
 .certification-posts { margin-bottom: 10px; }
 
@@ -1278,6 +1280,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
+
 
 
 
@@ -1408,7 +1412,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .certification-banner-box {
-    height: auto;
+    /* height: auto; */
   }
 
   .certification-content {
@@ -2085,10 +2089,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none; 
   position: fixed;
   z-index: 9999;
-  left: 0;
+  left: 50%;
   top: 0;
-  width: 100%;
-  height: auto;
+  width: 70%;
+  transform: translateX(-50%);
+  /* height: 10vh; */
+  /* overflow: hidden; */
 }
 
 /* Popup content */
@@ -2097,14 +2103,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin: auto;
   padding: 20px;
   width: 70%; 
-  height: auto;
+  height: 100%;
   margin-top: 30px;
   background-color: #4d4a4a;
   border: 2px solid #333; 
   border-radius: 14px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  overflow: hidden; /* Ensure content fits without scrollbars */
+  overflow: hidden;   
 }
 
 /* Close button */
@@ -2144,13 +2150,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Text inside popup */
 .popup-title {
-  font-size: auto;
+  font-size: 1.4rem;
   margin-bottom: 10px;
   color: #020101;
 }
 
 .popup-category-date {
-  font-size: 20px;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #000000;
 }
@@ -2162,8 +2168,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .certification-banner-box img {
-  max-width: 200%; 
-  height: auto; 
+  max-width: 100%; 
+  /* height: 10px;  */
 }
 
 
@@ -2176,7 +2182,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   top: 0;
   left: 0;
   width: 100%;
-  height: 103%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   align-items: center;
   justify-content: center;

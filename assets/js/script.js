@@ -68,31 +68,28 @@ modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 // custom select variables
-  const select = document.querySelectorAll("[data-select]");
-  const selectItems = document.querySelectorAll("[data-select-item]");
-  const selectValue = document.querySelector("[data-select-value]");
-  const filterBtn = document.querySelectorAll("[data-filter-btn]");
-  const selectCat = document.querySelector("#select-cat");
+const select = document.querySelectorAll("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-select-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+const selectCat = document.querySelector("#select-cat");
 
-  for(let i=0;i<select.length;i++){
-    select[i].addEventListener("click", function () {
-      elementToggleFunc(this);
-    });
-  }
+for (let i = 0; i < select.length; i++) {
+  select[i].addEventListener("click", function () {
+    elementToggleFunc(this);
+  });
+}
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-    // console.log(selectValue.innerText);
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-   if(i>=0 && i<=6){
-    elementToggleFunc(select[0]);
-  }
-  else{
-     elementToggleFunc(select[1]);
-
-   }
+    selectValue.innerText = selectedValue;
+    if (i >= 0 && i <= 4) {
+      elementToggleFunc(select[0]);
+    } else {
+      elementToggleFunc(select[1]);
+    }
     filterFunc(selectedValue);
   });
 }
@@ -102,8 +99,6 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
-    // console.log(selectValue);
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -180,7 +175,7 @@ popup.classList.add("popup");
 popup.innerHTML = `
   <div class="popup-content">
     <span class="close">&times;</span>
-    <img src="" alt="Certificate Image">
+    <img src="" alt="Certificate Image" style="width:70%;margin:auto">
     <h3 class="popup-title"></h3>
     <p class="popup-category-date"></p>
   </div>
