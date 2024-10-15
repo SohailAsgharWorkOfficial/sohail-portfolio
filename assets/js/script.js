@@ -85,6 +85,7 @@ for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = selectedValue;
+    selectCat.innerText = selectedValue;
     if (i >= 0 && i <= 4) {
       elementToggleFunc(select[0]);
     } else {
