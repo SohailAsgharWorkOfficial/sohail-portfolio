@@ -215,17 +215,33 @@ closeBtn.addEventListener("click", function () {
 
 const expertiseContainer = document.querySelector(".expertise-container");
 const expertiseList = [
-  "Web Developer",
-  "Software Engineer",
-  "App Developer",
   "Full Stack Developer",
+  "Mobile App Developer",
+  "Shopify Developer",
+  "WordPress Developer",
+  "UI/UX Designer",
+  "Graphic Designer",
+  "SEO Specialist",
+  "Digital Marketing Specialist",
+  "Content Writer",
+  "Project Manager",
+  "Software Engineer",
+  "Database Administrator",
+  "Systems Administrator",
+  "IT Support Specialist",
+  "Technical Writer",
+  "Marketing Specialist",
+  "Sales Executive",
+  "Customer Support Specialist",
+  "Data Engineer",
+  "Cloud Solutions Architect",
 ];
 let currentIndex = 0;
 
 setInterval(() => {
   expertiseContainer.textContent = expertiseList[currentIndex];
   currentIndex = (currentIndex + 1) % expertiseList.length;
-}, 2500);
+}, 1200);
 
 // PopUp Blog Image *******************************************
 
